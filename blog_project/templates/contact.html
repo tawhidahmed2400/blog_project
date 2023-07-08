@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Contact us | {% endblock title %}
+{%block body%}
+<h1 style="text-align: center;padding-top: 15px;" >CONTACT US</h1>
+<div class="container-fluid px-5 py-4">
+<form method="post" action="/contact">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="enter your name">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@eaxample.com">
+        
+    </div>
+    
+    <div class="form-group">
+      <label for="desc">tell me about what you want to contact for...</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">submit</button>
+  </form>
+</div>
+{% endblock body%}
